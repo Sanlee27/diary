@@ -89,23 +89,35 @@
 		<button type = "button" onclick="location.href='./scheduleList.jsp'">이전으로</button>
 	</form>
 	<h2><%=y%>년 <%=m%>월 <%=d%>일 스케줄 목록</h2>
-	<table class ="table table-striped">
-		<tr>
-			<th>시간</th>
-			<th>내용</th>
-			<th>생성일자</th>
-			<th>수정일자</th>
-			<th>수정</th>
-			<th>삭제</th>
-		</tr>
-			<tr>
-				<td><%=schedule.scheduleTime%></td>
-				<td><%=schedule.scheduleMemo%></td>
-				<td><%=schedule.createdate%></td>
-				<td><%=schedule.updatedate%></td>
-				<td><a href="./updateScheduleForm.jsp?scheduleNo=<%=schedule.scheduleNo%>">수정</a></td>
-				<td><a href="./deleteScheduleForm.jsp?scheduleNo=<%=schedule.scheduleNo%>">삭제</a></td>
-			</tr>
-	</table>
+	<%
+		if(schedule != null){
+	%>
+			<table class ="table table-striped">
+				<tr>
+					<th>시간</th>
+					<th>내용</th>
+					<th>생성일자</th>
+					<th>수정일자</th>
+					<th>수정</th>
+					<th>삭제</th>
+				</tr>
+					<tr>
+						<td><%=schedule.scheduleTime%></td>
+						<td><%=schedule.scheduleMemo%></td>
+						<td><%=schedule.createdate%></td>
+						<td><%=schedule.updatedate%></td>
+						<td><a href="./updateScheduleForm.jsp?scheduleNo=<%=schedule.scheduleNo%>">수정</a></td>
+						<td><a href="./deleteScheduleForm.jsp?scheduleNo=<%=schedule.scheduleNo%>">삭제</a></td>
+					</tr>
+			</table>
+	<%
+		} else {
+	%>
+			<div>
+				<span>스케줄이 없습니다.</span>
+			</div>
+	<%
+		}
+	%>
 </body>
 </html>
