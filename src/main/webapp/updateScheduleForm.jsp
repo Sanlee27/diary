@@ -50,37 +50,37 @@
 			if(rs.next()){
 	%>			
 				<tr>
-					<th>schedule_no</th>
+					<th>일정 번호</th>
 					<td>
 						<input type="text" name="scheduleNo" value="<%=scheduleNo%>" readonly="readonly"> 
 					</td>
 				</tr>
 				<tr>
-					<th>schedule_date</th>
+					<th>날짜</th>
 					<td>
 						<input type="date" name="scheduleDate" value="<%=rs.getString("schedule_date")%>">
 					</td>
 				</tr>
 				<tr>
-					<th>schedule_time</th>
+					<th>시간</th>
 					<td>
 						<input type="time" name="scheduleTime" value="<%=rs.getString("schedule_time")%>">
 					</td>
 				</tr>
 				<tr>
-					<th>schedule_color</th>
+					<th>색상</th>
 					<td>
 						<input type="color" name="scheduleColor" value="<%=rs.getString("schedule_color")%>">
 					</td>
 				</tr>
 				<tr>
-					<th>schedule_memo</th>
+					<th>메모사항</th>
 					<td>
 						<textarea rows="3" cols="80" name="scheduleMemo"><%=rs.getString("schedule_memo")%></textarea>
 					</td>
 				</tr>
 				<tr>
-					<th>schedule_pw</th>
+					<th>비밀번호</th>
 					<td>
 						<input type="password" name="schedulePw">
 					</td>

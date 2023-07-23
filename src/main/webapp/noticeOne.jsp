@@ -51,7 +51,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>noticeOne.jsp</title>
+<title>noticeOne</title>
 <!-- Latest compiled and minified CSS -->
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
@@ -60,36 +60,37 @@
 </head>
 <body>
 	<h1>공지 상세</h1>
-			<table class ="table table-striped" >
-				<tr>
-					<td>notice_no</td>
-					<td><%=notice.noticeNo%></td>
-				</tr>
-				<tr>
-					<td>notice_title</td>
-					<td><%=notice.noticeTitle%></td>
-				</tr>
-				<tr>
-					<td>notice_content</td>
-					<td><%=notice.noticeContent%></td>
-				</tr>
-				<tr>
-					<td>notice_writer</td>
-					<td><%=notice.noticeWriter%></td>
-				</tr>
-				<tr>
-					<td>createdate</td>
-					<td><%=notice.createdate%></td>
-				</tr>
-				<tr>
-					<td>updatedate</td>
-					<td><%=notice.updatedate%></td>
-				</tr>
-			</table>
+		<table class ="table table-striped" >
+			<tr>
+				<th>공지 번호</th>
+				<td><%=notice.noticeNo%></td>
+			</tr>
+			<tr>
+				<th>공지 제목</th>
+				<td><%=notice.noticeTitle%></td>
+			</tr>
+			<tr>
+				<th>공지 내용</th>
+				<td><%=notice.noticeContent%></td>
+			</tr>
+			<tr>
+				<th>작성자</th>
+				<td><%=notice.noticeWriter%></td>
+			</tr>
+			<tr>
+				<th>작성일자</th>
+				<td><%=notice.createdate%></td>
+			</tr>
+			<tr>
+				<th>수정일자</th>
+				<td><%=notice.updatedate%></td>
+			</tr>
+		</table>
 	<div>
 		<a class="btn btn-primary" href="./updateNoticeForm.jsp?noticeNo=<%=noticeNo%>">수정</a>
 		<a class="btn btn-primary" href="./deleteNoticeForm.jsp?noticeNo=<%=noticeNo%>">삭제</a>
 	</div>
+	<br>
 	<div><!-- 메인메뉴 -->
 		<a class="btn btn-danger" href="./home.jsp">홈으로</a>
 		<a class="btn btn-danger" href="./noticeList.jsp">공지 리스트</a>

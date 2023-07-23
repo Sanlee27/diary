@@ -50,35 +50,27 @@
   <form action="./updateNoticeAction.jsp" method="post">
       <table class ="table table-striped">
          <tr>
-            <td>
-               notice_no
-            </td>
+            <td>공지 번호</td>
             <td>
                <input type="number" name="noticeNo" 
                   value="<%=rs.getInt("notice_no")%>" readonly="readonly"> 
             </td>
          </tr>
          <tr>
-            <td>
-               notice_pw
-            </td>
+            <td>비밀번호</td>
             <td>
                <input type="password" name="noticePw"> 
             </td>
          </tr>
          <tr>
-            <td>
-               notice_title
-            </td>
+            <td>공지 제목</td>
             <td>
                <input type="text" name="noticeTitle" 
                   value="<%=rs.getString("notice_title")%>"> 
             </td>
          </tr>
          <tr>
-            <td>
-               notice_content
-            </td>
+            <td>공지 내용</td>
             <td>
                <textarea rows="5" cols="80" name="noticeContent">
                   <%=rs.getString("notice_content")%>
@@ -86,25 +78,19 @@
             </td>
          </tr>
          <tr>
-            <td>
-               notice_writer
-            </td>
+            <td>작성자</td>
             <td>
                <%=rs.getString("notice_writer")%>
             </td>
          </tr>
          <tr>
-            <td>
-               createdate
-            </td>
+            <td>작성일자</td>
             <td>
                <%=rs.getString("createdate")%>
             </td>
          </tr>
          <tr>
-            <td>
-               updatedate
-            </td>
+            <td>수정일자</td>
             <td>
                <%=rs.getString("updatedate")%>
             </td>

@@ -26,7 +26,7 @@
 	<form action="./deleteNoticeAction.jsp" method="post">
 		<table class ="table table-striped" >
 			<tr>
-				<td>notice_no</td>
+				<td>공지 번호</td>
 				<td>
 					<!-- 수정불가하게 하는 ... 방법 1) 안보이게 2) 읽기만 -->
 					<%--<input type="text" name="noticeNo" value="<%=noticeNo--%>
@@ -34,7 +34,7 @@
 				</td>
 			</tr>
 			<tr>
-				<td>notice_pw</td>
+				<td>비밀번호</td>
 				<td>
 					<input type="password" name="noticePw">
 				</td>

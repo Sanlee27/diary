@@ -45,13 +45,27 @@
 		ResultSet rs2 = stmt2.executeQuery();
 		
 	%>
+	<div class="p-4 bg-dark text-white text-center">
+	  <h1>다이어리 프로젝트</h1>
+	  <p>
+		달력 / 공지사항<br>
+	  	기간 : 23.04.19 - 23.04.25 / 	인원 : 1명<br>
+	  	개발환경 : Tool_Eclipse / HeidiSQL DB_MariaDB(3.1.3) Tomcat (10.1.7 > 9.0.75)<br> 
+	  	개발(구현) 내용<br>
+	  	mariaDB 이용 테이블 만들기<br>
+	  	DML 이용, 공지사항 / 일정 조회/입력/수정/삭제 가능 Form, Action 생성<br>
+	  	Calendar API 이용 달력 출력<br>
+	  	달력에 DB연결, 날짜별 데이터 출력<br>
+	  	Bootstrap5 이용 CSS적용
+	  </p> 
+	</div>
 	
 	<h2>최근순 일정 5개</h2>
 		
 	<table class ="table table-striped">
 		<tr>
-			<th>notice_title</th>
-			<th>createdate</th>
+			<th>공지 제목</th>
+			<th>작성일자</th>
 		</tr>
 		<%
 			while(rs1.next()){
@@ -74,9 +88,9 @@
 	<h2>오늘 일정 5개</h2>
 	<table class ="table table-striped">
 		<tr>
-			<th>schedule_date</th>
-			<th>schedule_time</th>
-			<th>schedule_memo</th>
+			<th>날짜</th>
+			<th>시간</th>
+			<th>메모사항</th>
 		</tr>
 		<%
 			while(rs2.next()){
@@ -98,10 +112,6 @@
 		<a class="btn btn-danger" href="./home.jsp">홈으로</a>
 		<a class="btn btn-danger" href="./noticeList.jsp">공지 리스트</a>
 		<a class="btn btn-danger" href="./scheduleList.jsp">일정 리스트</a>
-	</div>
-	<h2>다이어리 프로젝트</h2>
-	<div>
-	
 	</div>
 </body>
 </html>

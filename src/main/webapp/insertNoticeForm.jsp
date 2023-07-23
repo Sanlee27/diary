@@ -16,23 +16,23 @@
 	<form action="./insertNoticeAction.jsp" method="post">
 		<table class ="table table-striped" >
 			<tr>
-				<td>notice_title</td>
+				<td>공지 제목</td>
 				<td>
 					<input type="text" name="noticeTitle">
 				</td>
 			</tr>
 			<tr>
-				<td>notice_content</td>
+				<td>공지 내용</td>
 				<td>
 					<textarea rows="5" cols="80" name="noticeContent"></textarea>
 				</td>
 			</tr>
 			<tr>
-				<td>notice_writer</td>
+				<td>작성자</td>
 				<td><input type="text" name="noticeWriter"></td>
 			</tr>
 			<tr>
-				<td>notice_pw</td>
+				<td>비밀번호</td>
 				<td><input type="password" name="noticePw"></td>
 			</tr>
 			<tr>
